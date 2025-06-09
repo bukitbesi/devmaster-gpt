@@ -1,13 +1,27 @@
 diff --git a/.gitignore b/.gitignore
-index 072c32569620c82d60870c84992d95a7a8c0386c..0737ad0b1014a72ef5eebd1d7b4b8ff43708e2ea 100644
+index 1550c321a76fb5f5a5254e4fc4eb7cccd7ede720..1f6a53414b08550a2d018db57e8a8f9381ef4f2b 100644
 --- a/.gitignore
 +++ b/.gitignore
-@@ -1,14 +1,9 @@
--diff --git a//dev/null b/.gitignore
--index 0000000000000000000000000000000000000000..0737ad0b1014a72ef5eebd1d7b4b8ff43708e2ea 100644
----- a//dev/null
+@@ -1,28 +1,10 @@
+-diff --git a/.gitignore b/.gitignore
+-index 072c32569620c82d60870c84992d95a7a8c0386c..0737ad0b1014a72ef5eebd1d7b4b8ff43708e2ea 100644
+---- a/.gitignore
 -+++ b/.gitignore
--@@ -0,0 +1,9 @@
+-@@ -1,14 +1,9 @@
+--diff --git a//dev/null b/.gitignore
+--index 0000000000000000000000000000000000000000..0737ad0b1014a72ef5eebd1d7b4b8ff43708e2ea 100644
+----- a//dev/null
+--+++ b/.gitignore
+--@@ -0,0 +1,9 @@
+--+__pycache__/
+--+*.py[cod]
+--+*.log
+--+*.tmp
+--+*.swp
+--+.DS_Store
+--+env/
+--+.venv/
+--+.env
 -+__pycache__/
 -+*.py[cod]
 -+*.log
@@ -26,3 +40,4 @@ index 072c32569620c82d60870c84992d95a7a8c0386c..0737ad0b1014a72ef5eebd1d7b4b8ff4
 +env/
 +.venv/
 +.env
++node_modules/
