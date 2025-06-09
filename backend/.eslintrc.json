@@ -1,8 +1,26 @@
-diff --git a//dev/null b/.eslintrc.json
-index 0000000000000000000000000000000000000000..1d2765b6f5a24c527051fe32f4947de622a9a40e 100644
---- a//dev/null
-+++ b/.eslintrc.json
-@@ -0,0 +1,12 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/backend/.eslintrc.json b/backend/.eslintrc.json
+index 3b7bf5e358309f8726dbdead1c412c1ad188b2cf..1d2765b6f5a24c527051fe32f4947de622a9a40e 100644
+--- a/backend/.eslintrc.json
++++ b/backend/.eslintrc.json
+@@ -1,17 +1,12 @@
+-diff --git a//dev/null b/.eslintrc.json
+-index 0000000000000000000000000000000000000000..1d2765b6f5a24c527051fe32f4947de622a9a40e 100644
+---- a//dev/null
+-+++ b/.eslintrc.json
+-@@ -0,0 +1,12 @@
+-+{
+-+  "env": {
+-+    "es2020": true,
+-+    "node": true
+-+  },
+-+  "extends": "eslint:recommended",
+-+  "parserOptions": {
+-+    "ecmaVersion": 2020,
+-+    "sourceType": "module"
+-+  },
+-+  "rules": {}
+-+}
 +{
 +  "env": {
 +    "es2020": true,
@@ -15,3 +33,6 @@ index 0000000000000000000000000000000000000000..1d2765b6f5a24c527051fe32f4947de6
 +  },
 +  "rules": {}
 +}
+ 
+EOF
+)
