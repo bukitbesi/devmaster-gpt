@@ -1,8 +1,22 @@
-diff --git a//dev/null b/.gitignore
-index 0000000000000000000000000000000000000000..0737ad0b1014a72ef5eebd1d7b4b8ff43708e2ea 100644
---- a//dev/null
+diff --git a/.gitignore b/.gitignore
+index 072c32569620c82d60870c84992d95a7a8c0386c..0737ad0b1014a72ef5eebd1d7b4b8ff43708e2ea 100644
+--- a/.gitignore
 +++ b/.gitignore
-@@ -0,0 +1,9 @@
+@@ -1,14 +1,9 @@
+-diff --git a//dev/null b/.gitignore
+-index 0000000000000000000000000000000000000000..0737ad0b1014a72ef5eebd1d7b4b8ff43708e2ea 100644
+---- a//dev/null
+-+++ b/.gitignore
+-@@ -0,0 +1,9 @@
+-+__pycache__/
+-+*.py[cod]
+-+*.log
+-+*.tmp
+-+*.swp
+-+.DS_Store
+-+env/
+-+.venv/
+-+.env
 +__pycache__/
 +*.py[cod]
 +*.log
