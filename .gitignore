@@ -1,0 +1,14 @@
+diff --git a//dev/null b/.gitignore
+index 0000000000000000000000000000000000000000..0737ad0b1014a72ef5eebd1d7b4b8ff43708e2ea 100644
+--- a//dev/null
++++ b/.gitignore
+@@ -0,0 +1,9 @@
++__pycache__/
++*.py[cod]
++*.log
++*.tmp
++*.swp
++.DS_Store
++env/
++.venv/
++.env
