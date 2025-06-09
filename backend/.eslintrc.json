@@ -1,17 +1,13 @@
-diff --git a//dev/null b/.eslintrc.json
-index 0000000000000000000000000000000000000000..1d2765b6f5a24c527051fe32f4947de622a9a40e 100644
---- a//dev/null
-+++ b/.eslintrc.json
-@@ -0,0 +1,12 @@
-+{
-+  "env": {
-+    "es2020": true,
-+    "node": true
-+  },
-+  "extends": "eslint:recommended",
-+  "parserOptions": {
-+    "ecmaVersion": 2020,
-+    "sourceType": "module"
-+  },
-+  "rules": {}
-+}
+{
+  "env": {
+    "es2020": true,
+    "node": true
+  },
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "rules": {}
+}
+
