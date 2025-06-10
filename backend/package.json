@@ -1,54 +1,20 @@
- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
-diff --git a/backend/package.json b/backend/package.json
-index e2ef7864605a538cb9ee6d04b84250470baaa008..40ab39f76d47a0b53c17a1a984c3933d99560b67 100644
---- a/backend/package.json
-+++ b/backend/package.json
-@@ -1,25 +1,20 @@
--diff --git a//dev/null b/package.json
--index 0000000000000000000000000000000000000000..40ab39f76d47a0b53c17a1a984c3933d99560b67 100644
----- a//dev/null
--+++ b/package.json
--@@ -0,0 +1,20 @@
--+{
--+  "name": "devmaster-gpt",
--+  "version": "1.0.0",
--+  "description": "Code generation utilities",
--+  "main": "index.js",
--+  "type": "module",
--+  "scripts": {
--+    "test": "echo \"Error: no test specified\" && exit 1",
--+    "lint": "eslint ."
--+  },
--+  "keywords": [],
--+  "author": "",
--+  "license": "ISC",
--+  "dependencies": {
--+    "express": "^4.18.2"
--+  },
--+  "devDependencies": {
--+    "eslint": "^9.28.0"
--+  }
--+}
-+{
-+  "name": "devmaster-gpt",
-+  "version": "1.0.0",
-+  "description": "Code generation utilities",
-+  "main": "index.js",
-+  "type": "module",
-+  "scripts": {
-+    "test": "echo \"Error: no test specified\" && exit 1",
-+    "lint": "eslint ."
-+  },
-+  "keywords": [],
-+  "author": "",
-+  "license": "ISC",
-+  "dependencies": {
-+    "express": "^4.18.2"
-+  },
-+  "devDependencies": {
-+    "eslint": "^9.28.0"
-+  }
-+}
- 
-EOF
-)
+{
+  "name": "devmaster-gpt",
+  "version": "1.0.0",
+  "description": "Code generation utilities",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "eslint": "^9.28.0"
+  }
+}
