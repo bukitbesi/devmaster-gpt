@@ -9,6 +9,8 @@ DevMaster GPT demonstrates a minimal workflow for using the `openai` Python SDK.
    ```bash
    pip install -r requirements.txt
    ```
+   The `requirements.txt` file specifies `openai>=1.3` which is the minimum
+   supported SDK version.
 3. Set your OpenAI API key as an environment variable:
    ```bash
    export OPENAI_API_KEY=your-api-key
