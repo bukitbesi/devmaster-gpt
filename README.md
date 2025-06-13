@@ -22,9 +22,9 @@ python main.py
 The script loads the configured tools and runs interactively.
 
 ## Development
-Run the linter and test suite before committing changes.
+Before committing changes, run the code formatters and linters used in CI.
 
 ```bash
-ruff .
-pytest
+black .
+npx eslint .
 ```
