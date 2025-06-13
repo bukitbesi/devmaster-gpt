@@ -20,7 +20,10 @@ def write_docs(code_block: str) -> str:
     """Generates a detailed docstring or documentation for a given code block."""
     messages = [
         {"role": "system", "content": "You are a documentation assistant."},
-        {"role": "user", "content": f"Write a full docstring for the following code:\n{code_block}"},
+        {
+            "role": "user",
+            "content": f"Write a full docstring for the following code:\n{code_block}",
+        },
     ]
     return llm.chat(messages)
 
@@ -29,8 +32,14 @@ def write_docs(code_block: str) -> str:
 def suggest_refactor(code_block: str) -> str:
     """Suggests improvements or modern syntax for given code."""
     messages = [
-        {"role": "system", "content": "You are a senior software engineer reviewing code."},
-        {"role": "user", "content": f"Suggest improvements for this code:\n{code_block}"},
+        {
+            "role": "system",
+            "content": "You are a senior software engineer reviewing code.",
+        },
+        {
+            "role": "user",
+            "content": f"Suggest improvements for this code:\n{code_block}",
+        },
     ]
     return llm.chat(messages)
 
@@ -66,7 +75,9 @@ def fetch_json(url: str) -> dict:
     try:
         with urllib.request.urlopen(url) as response:
             if response.getcode() != 200:
-                raise ConnectionError(f"Request failed with status: {response.getcode()}")
+                raise ConnectionError(
+                    f"Request failed with status: {response.getcode()}"
+                )
             body = response.read().decode()
     except urllib.error.HTTPError as exc:
         raise ConnectionError(f"HTTP error: {exc.code}") from exc

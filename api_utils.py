@@ -23,9 +23,7 @@ def fetch_json(url: str) -> Dict[str, Any]:
     try:
         with urlopen(url) as response:
             if response.status != 200:
-                raise ConnectionError(
-                    f"Request failed with status {response.status}"
-                )
+                raise ConnectionError(f"Request failed with status {response.status}")
             data = response.read().decode()
     except HTTPError as exc:
         raise ConnectionError(f"HTTP error: {exc.code}") from exc
