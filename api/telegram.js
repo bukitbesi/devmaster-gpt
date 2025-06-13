@@ -1,32 +1,35 @@
 export default async function handler(req, res) {
-  if (req.method !== "POST") {
-    return res.status(200).send("Telegram webhook endpoint");
-  }
+  const data = req.body;
 
-  if (!process.env.BOT_TOKEN) {
-    console.error("BOT_TOKEN is not configured");
-    return res.status(500).send("Bot token missing");
-  }
+  const chatId = data?.message?.chat?.id;
+  const text = data?.message?.text;
 
-  const { message } = req.body ?? {};
-
-  if (message?.text === "/start") {
-    const chatId = message.chat.id;
-
+  if (text === "/start") {
     await fetch(`https://api.telegram.org/bot${process.env.BOT_TOKEN}/sendMessage`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         chat_id: chatId,
-        text: "Welcome to AivioGenBot – Tap below to get your AI prompt.",
+        text: "👋 Welcome to AivioGenBot – Tap below to get your AI prompt.",
         reply_markup: {
-          keyboard: [[{ text: "Generate Prompt" }]],
+          keyboard: [[{ text: "🧠 Generate Prompt" }]],
           resize_keyboard: true,
-          one_time_keyboard: true,
-        },
+          one_time_keyboard: false
+        }
       }),
     });
+    return res.status(200).send("OK");
+  }
 
+  if (text === "🧠 Generate Prompt") {
+    await fetch(`https://api.telegram.org/bot${process.env.BOT_TOKEN}/sendMessage`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        chat_id: chatId,
+        text: "🧠 What platform? (e.g. Midjourney, FX, SEO, ChatGPT)",
+      }),
+    });
     return res.status(200).send("OK");
   }
 
