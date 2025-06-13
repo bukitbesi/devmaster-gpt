@@ -19,15 +19,20 @@
  ```bash
  python main.py
  ```
- The script loads the configured tools and runs interactively.
+The script loads the configured tools and runs interactively.
+
+## Telegram webhook
+To connect a Telegram bot, set the `BOT_TOKEN` environment variable with your
+bot token. Then configure the webhook:
+
+```bash
+curl "https://api.telegram.org/bot$BOT_TOKEN/setWebhook?url=https://<your-host>/api/telegram"
+```
  
- ## Development
--Run the linter and test suite before committing changes.
-+Before committing changes, run the code formatters and linters used in CI.
- 
- ```bash
--ruff .
--pytest
-+black .
-+npx eslint .
- ```
+## Development
+Before committing changes, run the code formatters and linters used in CI.
+
+```bash
+black .
+npx eslint .
+```
