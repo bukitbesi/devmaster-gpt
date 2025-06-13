@@ -1,8 +1,17 @@
 export default async function handler(req, res) {
-  const data = req.body;
+  if (req.method !== "POST") {
+    return res.status(200).send("Telegram webhook endpoint");
+  }
 
-  if (data?.message?.text === "/start") {
-    const chatId = data.message.chat.id;
+  if (!process.env.BOT_TOKEN) {
+    console.error("BOT_TOKEN is not configured");
+    return res.status(500).send("Bot token missing");
+  }
+
+  const { message } = req.body ?? {};
+
+  if (message?.text === "/start") {
+    const chatId = message.chat.id;
 
     await fetch(`https://api.telegram.org/bot${process.env.BOT_TOKEN}/sendMessage`, {
       method: "POST",
@@ -13,8 +22,8 @@ export default async function handler(req, res) {
         reply_markup: {
           keyboard: [[{ text: "Generate Prompt" }]],
           resize_keyboard: true,
-          one_time_keyboard: true
-        }
+          one_time_keyboard: true,
+        },
       }),
     });
 
